@@ -7,20 +7,28 @@
    <link rel="icon" type="image/png" href="icons/home.png">
 </head>
 <body>
+    <form name="frm-user" action="signup.php" method="post">
     <table border="1">
-       <tr><td> <label for="fname">Firstname</label><br></tr></td>
-        <input type="text"><br>
-        <label for="lname">Lastname</label><br>
-            <input type="text"><br>
+        <label for="fname">Firstname</label> <br>
+        <input type="text" name="fname" required><br>
+
+            <label for="lname">Lastname</label> <br>
+        <input type="text" name="lname" required><br>
+
         <label for="email">Email</label><br>
-            <input type="email"><br>
+            <input type="email" name="email" required><br>
+
         <label for="">Password</label><br>
-            <input type="password"><br>
+            <input type="password" name="passwd" required><br>
+
         <label for="passwd">Password again</label><br>
             <input type="password"><br>
+
         <label for="mphone">Mobile phone</label><br>
-            <input type="number"><br><br>
+            <input type="number" name="mphone" required><br><br>
+
         <button>Register</button>
+        </form>
     </table>
 </body>
 </html>
