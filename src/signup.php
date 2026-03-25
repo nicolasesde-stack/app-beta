@@ -6,7 +6,7 @@
     $e_mail =$_POST['email'];
     $m_phone =$_POST['mphone'];
     $p_sswd =$_POST['passwd'];
-
+    //$
     //Query to insert into sql
     $sql="INSERT INTO users(firstname,lastname,email,mobile_phone,password)
         values('$f_name','$l_name','$e_mail','$m_phone','$p_sswd')";
