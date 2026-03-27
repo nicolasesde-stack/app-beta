@@ -11,7 +11,7 @@
     $sql="INSERT INTO users(firstname,lastname,email,mobile_phone,password)
         values('$f_name','$l_name','$e_mail','$m_phone','$p_sswd')";
     //Execute query
-    pg_query($sql);  
+      
     
     //email 
 $check_email = "SELECT email FROM users WHERE email = '$e_mail'";
@@ -31,9 +31,11 @@ if (pg_num_rows($res_phone) > 0) {
     exit();
 }
 
+
+$res_local = pg_query($local_conn, $sql); 
 if ($res_local) {
     // --- PASO B: Si funcionó el anterior, guardar en la nube (Supabase) ---
-    $res_supa = pg_query($supa_conn, $sql);
+      $res_supa = pg_query($supa_conn, $sql);
 
     if ($res_supa) {
         echo "¡Listo! Guardado en ambos lados.";
@@ -43,3 +45,6 @@ if ($res_local) {
 } else {
     echo "Error: No se pudo guardar ni en local.";
 }
+
+
+$enc_pass = password_hash($p_sswd, PASSWORD_BCRYPT);
