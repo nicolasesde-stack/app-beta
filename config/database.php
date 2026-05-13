@@ -36,7 +36,7 @@
     echo" Local success connection !!!";
    }
     //supa connection
-    /*
+    
    $supa_conn = pg_connect($supa_data_connection);
    if(!$supa_conn){
         echo "Error: Unable to connect to supabase database. ";
@@ -45,5 +45,5 @@
     echo" <br>supabse success connection !!!";
    }
    
-   */
+   
 ?>
